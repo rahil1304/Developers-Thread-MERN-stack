@@ -177,7 +177,13 @@ const CreateProfile = ({ createProfile, history }) => {
 
             <div className='form-group social-input'>
               <i className='fab fa-youtube fa-2x'></i>
-              <input type='text' placeholder='YouTube URL' name='youtube' />
+              <input
+                type='text'
+                placeholder='YouTube URL'
+                name='youtube'
+                value={youtube}
+                onChange={(e) => onChange(e)}
+              />
             </div>
 
             <div className='form-group social-input'>
@@ -205,9 +211,9 @@ const CreateProfile = ({ createProfile, history }) => {
         )}
 
         <input type='submit' className='btn btn-primary my-1' />
-        <a className='btn btn-dark my-1' href='dashboard.html'>
+        <Link className='btn btn-dark my-1' to='/dashboard'>
           Go Back
-        </a>
+        </Link>
       </form>
     </Fragment>
   );
