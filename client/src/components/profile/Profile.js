@@ -5,22 +5,17 @@ import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import { getProfileById } from "../../actions/profile";
 
-const Profile = ({
-  getProfileById,
-  profile: { profile, loading },
-  auth,
-  match,
-}) => {
+const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
   useEffect(() => {
     getProfileById(match.params.id);
-  }, [getProfileById]);
+  }, [getProfileById, match.params.id]);
   return (
     <Fragment>
-      {profile === null || loading ? (
+      {profile === null ? (
         <Spinner />
       ) : (
         <Fragment>
-          <Link to='/profile' className='btn btn-light'>
+          <Link to='/profiles' className='btn btn-light'>
             Back to Profiles
           </Link>
           {auth.isAuthenticated &&
