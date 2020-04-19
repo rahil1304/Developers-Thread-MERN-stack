@@ -16,7 +16,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
       ) : (
         <Fragment>
           <Link to='/profiles' className='btn btn-light'>
-            Back to Profiles
+            Back To Profiles
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
