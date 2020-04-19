@@ -78,6 +78,7 @@ export const addExperience = (formData, history) => async (dispatch) => {
 
     if (errors) {
       errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
+      console.log("error");
     }
     dispatch({
       type: PROFILE_ERROR,
