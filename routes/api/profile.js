@@ -63,7 +63,9 @@ router.post(
     } = req.body;
 
     //Build profile object
-    profileFields = {};
+    const profileFields = {
+      website: website === "" ? "" : normalize(website, { forceHttps: true }),
+    };
     profileFields.user = req.user.id;
     if (company) profileFields.company = company;
     if (website) profileFields.website = website;
