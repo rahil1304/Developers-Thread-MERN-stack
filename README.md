@@ -5,4 +5,4 @@ The project is live and running on https://warm-brook-58495.herokuapp.com/
 - Developers can create their profiles containing their areas of expertise and their projects. Github API has also been integrated to automatically fetch the latest repositories of the user and their display avatar, making it easier to connect, help, or ask for help. 
 - Developers can post new articles, comment on the posts, and even like or unlike a post. 
 
-A special thanks to Brad Traversy whose course on MERN stack really helped me understand the important concepts that helped me build this project. 
+A special thanks to Brad Traversy whose course on MERN stack really helped me understand important concepts that helped me build this project. 
